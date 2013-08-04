@@ -1,0 +1,71 @@
+// Place all the styles related to the appointments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$appointment_border: #C4C4C4;
+$appointment_bg: white;
+$appointment_text: white;
+$appointment_link_hover: #FF2D2D;
+
+.appointment{
+  background: $appointment_bg;
+  border: 2px solid $appointment_border;
+  color: black;
+  margin: 5px;
+  padding: 5px;
+
+  a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover{
+      color: $appointment_link_hover; 
+    }
+  }
+
+  &.form{
+    border: none;
+    margin: 10px;
+  }
+
+  &.form-wrap{
+    text-align: left; 
+  }
+
+  &.info{
+    margin: 10px;
+    min-width: 300px;
+    display: inline-block;
+  }
+
+  &.extra-info{
+    display: block; 
+    margin: 5px 10px 10px 10px;
+
+    li{
+      list-style: none; 
+    }
+
+    ul{
+      padding: 0px;
+    }
+  }
+
+  &.options{
+    li{
+      display: inline; 
+      list-style: none; 
+      padding-right: 10px;
+    }
+    ul{
+      margin: 0px;
+      padding: 0px ;
+    }
+  }
+}
+
+.container{
+  display: inline-block;
+  min-width: 300px;
+}
