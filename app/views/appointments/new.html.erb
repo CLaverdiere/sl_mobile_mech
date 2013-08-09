@@ -1,9 +1,7 @@
-<div class="appointment head">
+<%= render 'home/header' %>
+
+<div id="wrapper">
   <h1>Schedule an appointment</h1>
-</div>
 
-<%= render 'form' %>
-
-<div class="appointment back">
-  <%= link_to "Nevermind, take me back", appointments_path %>
+  <%= render 'form' %>
 </div>

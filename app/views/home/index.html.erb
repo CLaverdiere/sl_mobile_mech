@@ -1,13 +1,23 @@
 <%= render 'header' %>
 
 <div id="wrapper">
-  <div id="manifesto" class="shadowed">
+  <div id="manifesto" class="main-item shadowed">
     <h2>Welcome to Scott Laverdiere's Mobile Mechanic Site</h2>
     <p>Hey I'm Scott and I fix cars and drive to you and stuff. This is very bad placeholder text, but whatever.</p>
   </div>
 
-  <div id="sidebar" class="shadowed">
-    <h3>Special Deals</h3>
-    <p>Just kidding, I have none.</p>
+  <div id="sidebar">
+    <div id="make_appointment" class="sidebar-item shadowed">
+      <h3>Make an Appointment</h3>
+      <p>You can quickly create an appointment with Scott. Click the button below and fill out the simple form.</p>
+      <div id="btn-div" class="centered">
+        <%= button_to "Schedule Appointment", new_appointment_path, method: :get, class: "btn fade" %>
+      </div>
+    </div>
+
+    <div id="deals" class="sidebar-item shadowed">
+      <h3>Special Deals</h3>
+      <p>Just kidding, I have none.</p>
+    </div>
   </div>
 </div>

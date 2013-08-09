@@ -1,5 +1,6 @@
 class AppointmentsController < ApplicationController
-  before_action :set_appointment, only: [:show, :edit, :update, :destroy]
+  before_action :set_appointment, only: [:show, :edit, :update, :destroy, :email]
+  http_basic_authenticate_with name: 'scott', password: 'bym2JSt95Hl1', only: [:index]
 
   # GET /appointments
   # GET /appointments.json
@@ -59,6 +60,9 @@ class AppointmentsController < ApplicationController
       format.html { redirect_to appointments_url }
       format.json { head :no_content }
     end
+  end
+
+  def email
   end
 
   private
