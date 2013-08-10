@@ -12,12 +12,6 @@
  *= require_tree .
  */
 
-// TODO
-// Font choice
-// Background texture
-// Logos
-// Users accessing other appointments
-
 $body_bg: #EEEEEE;
 $header_border: #FF2D2D;
 $header_bg: #2E2E2E;
@@ -51,7 +45,7 @@ body{
   padding: 10px;
 
   &:hover{
-    background: darken($header_border, 25%);
+    background: darken($header_border, 15%);
   }
 }
 

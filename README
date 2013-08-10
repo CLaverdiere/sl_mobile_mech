@@ -1,0 +1,18 @@
+TODO:
+
+Functionality:
+  
+
+Models:
+  Appointments:
+    Field: reason.
+    Validate email
+    Validate phone
+
+Views:
+
+Style:
+  Background Textures
+  Better Buttons
+  Fonts
+  Logo
