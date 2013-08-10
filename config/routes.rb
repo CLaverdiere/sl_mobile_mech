@@ -1,9 +1,12 @@
 SlMobileMech::Application.routes.draw do
-  # Gets
+  # Get routes
   get "admin/index"
   get "admin", to: "admin#index"
 
+  get "home/about"
+  get "home/contact"
   get "home/index"
+  get "home/services"
 
   # Resources
   resources :appointments
