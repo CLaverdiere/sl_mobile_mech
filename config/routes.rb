@@ -1,7 +1,18 @@
 SlMobileMech::Application.routes.draw do
+  # Gets
+  get "admin/index"
+  get "admin", to: "admin#index"
+
   get "home/index"
+
+  # Resources
   resources :appointments
 
+  namespace :admin do
+    resources :appointments
+  end
+
+  # Root
   root to: 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

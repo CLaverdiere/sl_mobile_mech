@@ -1,0 +1,12 @@
+<%= render 'home/header' %>
+
+<div class="main-item shadowed">
+  <h1>Admin Page</h1>
+  <p>From here, you can manage the site. Users without the login info do not have access to this page.</p>
+
+  <ul>
+    <li> <%= link_to "View and Manage Appointments", admin_appointments_path %> </li>
+    <li> <%= link_to "Create New Front Page Posting -- (Not yet implemented)" %> </li>
+    <li> <%= link_to "Create New Special Deal Posting -- (Not yet implemented)" %> </li>
+  <ul>
+</div>

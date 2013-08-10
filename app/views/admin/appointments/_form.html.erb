@@ -1,0 +1,33 @@
+<%= form_for [:admin, @appointment] do |f| %>
+  <% if @appointment.errors.any? %>
+    <div id="error_explanation" class="appointment errors">
+      <ul>
+      <% @appointment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="appointment form-wrap">
+    <div class="appointment form">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="appointment form">
+      <%= f.label :phone %><br>
+      <%= f.text_field :phone %>
+    </div>
+    <div class="appointment form">
+      <%= f.label :email %><br>
+      <%= f.text_field :email %>
+    </div>
+    <div class="appointment form">
+      <%= f.label :time %><br>
+      <%= f.datetime_select :time, ampm: true %>
+    </div>
+    <div class="appointment form">
+      <%= f.submit %>
+    </div>
+  </div>
+<% end %>
