@@ -29,7 +29,7 @@
           <ul>
             <li><%= link_to "Edit #{a.first_name}'s Appointment", edit_admin_appointment_path(a)%></li>
             <li><%= link_to "Delete #{a.first_name}'s Appointment", admin_appointment_path(a),
-                             method: :delete, data: {confirm: "You sure?"} %></li>
+                             method: :delete, data: {confirm: "You sure you want to delete this?"} %></li>
           </ul>
         </div>
       </div>

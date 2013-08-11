@@ -3,5 +3,5 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-  $(".appointment-container").click ->
+  $(document).on 'click', '.appointment-container', ->
     $(".extra-info", this).toggle 'fast'

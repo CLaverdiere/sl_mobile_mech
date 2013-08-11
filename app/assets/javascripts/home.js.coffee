@@ -4,7 +4,7 @@
 
 # Add hover color to all links
 $ ->
-  $("a").hover (->
+  $(document).on 'mouseenter', 'a', ->
     $(this).addClass "hover-color"
-    ), ->
+  $(document).on 'mouseleave', 'a', ->
     $(this).removeClass "hover-color"
