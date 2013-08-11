@@ -5,7 +5,16 @@ class Admin::AppointmentsController < ApplicationController
   # GET /admin/appointments
   # GET /admin/appointments.json
   def index
-    @appointments = Appointment.order("time ASC")
+    case params[:show]
+    when 'all'
+      @appointments = Appointment.order("time ASC")
+    when 'current'
+      @appointments = Appointment.where("time > ?", Date.today)
+    when 'past'
+      @appointments = Appointment.where("time < ?", Date.today)
+    else
+      @appointments = []
+    end
   end
 
   # GET /admin/appointments/1

@@ -10,15 +10,15 @@
 
     <h2>Display</h2>
     <ul>
-      <li><%= link_to "All Appointments" %></li>
-      <li><%= link_to "Current Appointments" %></li>
-      <li><%= link_to "Past Appointments" %></li>
+      <li><%= link_to "All Appointments", :show => 'all' %></li>
+      <li><%= link_to "Current Appointments", :show => 'current' %></li>
+      <li><%= link_to "Past Appointments", :show => 'past' %></li>
     </ul>
   </div>
 
   <div id="appointment-pane">
     <% if @appointments.empty? %>
-      <p>No appointments =(</p>
+      <p>No appointments matched this criteria.</p>
     <% end %>
 
     <% @appointments.each do |a| %>
