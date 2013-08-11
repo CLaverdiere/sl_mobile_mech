@@ -7,13 +7,13 @@ class Admin::AppointmentsController < ApplicationController
   def index
     case params[:show]
     when 'all'
-      @appointments = Appointment.order("time ASC")
+      @appointments = Appointment.order("time DESC")
     when 'current'
-      @appointments = Appointment.where("time > ?", Date.today)
+      @appointments = Appointment.where("time > ?", Date.today).order("time ASC")
     when 'past'
-      @appointments = Appointment.where("time < ?", Date.today)
+      @appointments = Appointment.where("time < ?", Date.today).order("time DESC")
     else
-      @appointments = []
+      @appointments = Appointment.where("time > ?", Date.today).order("time ASC")
     end
   end
 
