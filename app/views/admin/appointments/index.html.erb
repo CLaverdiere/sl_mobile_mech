@@ -1,30 +1,38 @@
 <%= render 'home/header' %>
 
-<div class="appointment head">
-  <h1>All Appointments</h1>
-</div>
+<div id="appointment-wrapper">
+  <div id="side-pane" class="appointment">
+    <h1>Appointments</h1>
+    <h2>Actions</h2>
+    <ul>
+      <li><%= link_to "Create an Appointment", new_admin_appointment_path %></li>
+    </ul>
 
-<div class="appointment options">
-  <ul>
-    <li><%= link_to "Make an Appointment", new_admin_appointment_path %></li>
-  </ul>
-</div>
-
-<% if @appointments.empty? %>
-  <p>No appointments =(</p>
-<% end %>
-
-<% @appointments.each do |a| %>
-  <div class="container">
-    <%= render 'info', :a => a %>
-
-    <div class="appointment extra-info">
-      <ul>
-        <li><%= link_to "Edit #{a.first_name}'s Appointment", edit_admin_appointment_path(a)%></li>
-        <li><%= link_to "Delete #{a.first_name}'s Appointment", admin_appointment_path(a),
-                         method: :delete, data: {confirm: "You sure?"} %></li>
-      </ul>
-    </div>
+    <h2>Display</h2>
+    <ul>
+      <li><%= link_to "All Appointments" %></li>
+      <li><%= link_to "Current Appointments" %></li>
+      <li><%= link_to "Past Appointments" %></li>
+    </ul>
   </div>
-<% end %>
 
+  <div id="appointment-pane">
+    <% if @appointments.empty? %>
+      <p>No appointments =(</p>
+    <% end %>
+
+    <% @appointments.each do |a| %>
+      <div class="appointment-container">
+        <%= render 'info', :a => a %>
+
+        <div class="appointment extra-info">
+          <ul>
+            <li><%= link_to "Edit #{a.first_name}'s Appointment", edit_admin_appointment_path(a)%></li>
+            <li><%= link_to "Delete #{a.first_name}'s Appointment", admin_appointment_path(a),
+                             method: :delete, data: {confirm: "You sure?"} %></li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

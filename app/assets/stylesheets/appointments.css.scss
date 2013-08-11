@@ -34,13 +34,14 @@ $appointment_link_hover: #FF2D2D;
   }
 
   &.info{
+    cursor: pointer;
     margin: 10px;
     min-width: 300px;
     display: inline-block;
   }
 
   &.extra-info{
-    display: block; 
+    display: none; 
     margin: 5px 10px 10px 10px;
 
     li{
@@ -65,7 +66,29 @@ $appointment_link_hover: #FF2D2D;
   }
 }
 
-.container{
+.appointment-container{
   display: inline-block;
+  margin: 5px;
   min-width: 300px;
+  text-align: left;
+  vertical-align: top;
+}
+
+#appointment-pane{
+  display: inline-block;
+  width: 800px;
+}
+
+#appointment-wrapper{
+  display: inline-block;
+  width: 90%;
+}
+
+#side-pane{
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+  width: 250px;
 }
