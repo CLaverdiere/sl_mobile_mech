@@ -1,6 +1,10 @@
 <%= render 'header' %>
 
 <div id="wrapper">
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+
   <div id="manifesto" class="main-item shadowed">
     <h2>Welcome to Scott Laverdiere's Mobile Mechanic Site</h2>
     <p>Hey I'm Scott and I fix cars and drive to you and stuff. This is very bad placeholder text, but whatever.</p>

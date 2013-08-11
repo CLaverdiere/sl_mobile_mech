@@ -14,7 +14,8 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.save
-        format.html { redirect_to root_path, notice: 'Appointment was successfully created.' }
+        flash[:notice] = "Appointment created!"
+        format.html { redirect_to root_path, notice: 'Appointment successfully created. An email has been sent with more info. Thanks!' }
         format.json { render action: 'confirm', status: :created, location: root_path}
       else
         format.html { render action: 'new' }
