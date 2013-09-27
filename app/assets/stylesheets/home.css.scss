@@ -36,11 +36,26 @@ header{
   }
 }
 
+footer{
+  background: $header_bg;
+  border-top: 3px solid $header_border;
+  color:      $header_text;
+  margin-top: 30px;
+}
+
+.footer-item{
+  display: inline-block;
+  padding: 50px;
+  text-align: left;
+  vertical-align: top;
+}
+
 .main-item{
   background: white;
   display: inline-block;
   margin: 30px;
   min-width: 250px;
+  max-width: 700px;
   padding: 15px;
   text-align: left;
   vertical-align: top;
