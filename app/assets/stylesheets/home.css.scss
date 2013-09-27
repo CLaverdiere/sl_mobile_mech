@@ -7,8 +7,12 @@ $header_border: #FF2D2D;
 $header_bg: #2E2E2E;
 $header_text: white;
 
+$illusion_url: image-url("illusion/use_your_illusion.png");
+
+
 header{
-  background: $header_bg;
+  //background: $header_bg;
+  background-image: $illusion_url;
   border-bottom: 3px solid $header_border;
   color: $header_text;
   margin: 0px;
@@ -37,7 +41,8 @@ header{
 }
 
 footer{
-  background: $header_bg;
+  //background: $header_bg;
+  background-image: $illusion_url;
   border-top: 3px solid $header_border;
   color:      $header_text;
   margin-top: 30px;
@@ -53,6 +58,8 @@ footer{
 .main-item{
   background: white;
   display: inline-block;
+  font-size: 16px;
+  line-height: 1.5em;
   margin: 30px;
   min-width: 250px;
   max-width: 700px;
