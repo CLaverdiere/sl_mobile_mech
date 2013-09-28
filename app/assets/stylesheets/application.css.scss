@@ -12,6 +12,8 @@
  *= require_tree .
  */
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 $body_bg: #EEEEEE;
 $header_border: #FF2D2D;
 $header_bg: #2E2E2E;
@@ -31,6 +33,7 @@ a{
 
 body{
   background: $body_bg;
+  font-family: 'Open Sans', serif;
   margin: 0 auto;
   text-align: center;
 }
