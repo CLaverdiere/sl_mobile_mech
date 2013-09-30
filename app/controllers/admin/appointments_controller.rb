@@ -1,6 +1,7 @@
 class Admin::AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
-  http_basic_authenticate_with name: 'scott', password: 'bym2JSt95Hl1', only: [:index]
+  http_basic_authenticate_with name: APP_CONFIG['username'], 
+                           password: APP_CONFIG['password'], only: [:index]
 
   # GET /admin/appointments
   # GET /admin/appointments.json
