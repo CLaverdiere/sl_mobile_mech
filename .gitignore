@@ -16,4 +16,5 @@
 /tmp
 
 # Ignore yaml configs
-/config/*.yml
+/config/config.yml
+/config/database.yml
