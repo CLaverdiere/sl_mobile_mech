@@ -11,9 +11,11 @@ group :development do
   gem 'sqlite3'
 end
 
+# Explicitly state Ruby version
+ruby '2.0.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
-
 
 # Use Faker as... faker
 gem 'faker', '1.1.2'
