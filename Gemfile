@@ -17,7 +17,7 @@ group :doc do
 end
 
 # Explicitly state Ruby version
-ruby '2.0.0'
+ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
