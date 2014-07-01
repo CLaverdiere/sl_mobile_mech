@@ -39,7 +39,7 @@ class Admin::AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.save
-        format.html { redirect_to admin_appointment_path, notice: 'Appointment was successfully created.' }
+        format.html { redirect_to admin_appointment_path(@appointment), notice: 'Appointment was successfully created.' }
         format.json { render action: 'show', status: :created, location: admin_appointment_path }
       else
         format.html { render action: 'new' }
