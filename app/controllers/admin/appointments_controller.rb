@@ -14,7 +14,8 @@ class Admin::AppointmentsController < ApplicationController
     when 'past'
       @appointments = Appointment.where("time < ?", Date.today).order("time DESC")
     else
-      @appointments = Appointment.where("time > ?", Date.today).order("time ASC")
+      @appointments = Appointment.order("time DESC")
+      # @appointments = Appointment.where("name LIKE ?", "%#{params[:search]}%").order("time DESC")
     end
   end
 

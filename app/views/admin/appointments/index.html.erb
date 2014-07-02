@@ -12,6 +12,13 @@
       <li><%= link_to "Current Appointments", :show => 'current' %></li>
       <li><%= link_to "Past Appointments", :show => 'past' %></li>
     </ul>
+
+    <h2>Search</h2>
+    <%= form_tag admin_appointments_path, method: "get" do %>
+      <%= text_field_tag :search, params[:search] %>
+      <br /> <br />
+      <%= submit_tag "Search", name: nil %>
+    <% end %>
   </div>
 
   <div id="appointment-pane">
@@ -20,7 +27,7 @@
     <% end %>
 
     <% @appointments.each do |a| %>
-      <div class="appointment-container">
+      <div class="appointment-container <%= a.name %>">
         <%= render 'info', :a => a %>
 
         <div class="appointment extra-info">

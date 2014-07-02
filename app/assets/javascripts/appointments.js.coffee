@@ -3,5 +3,15 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
+  items = $('.appointment-container')
+  $('#search').bind "keyup", ->
+    search_str = $(this).val().toLowerCase()
+
+    items.each -> 
+      if $(this).attr('class').toLowerCase().indexOf(search_str) == -1
+        $(this).fadeOut 'fast'
+      else $(this).fadeIn 'fast'
+
   $(document).on 'click', '.appointment-container', ->
     $(".extra-info", this).toggle 'fast'
+

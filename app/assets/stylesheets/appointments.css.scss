@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $appointment_border: #C4C4C4;
-$appointment_bg: white;
+$appointment_bg: #F2F2F2;
 $appointment_text: white;
 $appointment_link_hover: #FF2D2D;
 
@@ -13,6 +13,7 @@ $appointment_link_hover: #FF2D2D;
   color: black;
   margin: 5px;
   padding: 5px;
+  padding-left: 25px;
 
   a{
     color: black;
@@ -88,7 +89,7 @@ $appointment_link_hover: #FF2D2D;
 #side-pane{
   display: inline-block;
   margin-top: 15px;
-  padding: 10px;
+  padding: 25px;
   text-align: left;
   vertical-align: top;
   width: 250px;
