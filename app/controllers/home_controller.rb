@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  layout "static_page"
+
   def index
   end
 

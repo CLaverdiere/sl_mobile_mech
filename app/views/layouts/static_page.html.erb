@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SlMobileMech</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <%= render 'home/header' %>
+
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+
+  <div id="wrapper">
+    <div id="main-content">
+      <%= yield %>
+    </div>
+
+    <div id="sidebar">
+      <div id="make_appointment" class="sidebar-item shadowed">
+        <h2>Make an Appointment</h2>
+        <div id="btn-div" class="centered">
+          <%= button_to "Schedule Appointment", new_appointment_path, method: :get, class: "btn fade" %>
+        </div>
+      </div>
+
+      <div id="make_appointment" class="sidebar-item shadowed">
+        <h2>Specials</h2>
+        <p>No specials at the moment.</p>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'home/footer' %>
+</body>
+
+</html>
