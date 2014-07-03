@@ -2,6 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+# TODO BUG: Search doesn't work until refresh.
+
 $(document).ready ->
   items = $('.appointment-container')
   $('#search').bind "keyup", ->
