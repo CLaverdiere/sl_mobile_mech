@@ -45,6 +45,11 @@ h1, h2, h3 {
   font-family: $header_font;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 table {
   border: 3px solid $header_bg;
 
