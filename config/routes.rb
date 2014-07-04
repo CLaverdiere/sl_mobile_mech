@@ -1,4 +1,6 @@
 SlMobileMech::Application.routes.draw do
+  resources :reviews
+
   # Get routes
   get "admin/index"
   get "admin", to: "admin#index"
