@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140703233731) do
+ActiveRecord::Schema.define(version: 20140704150126) do
 
   create_table "appointments", force: true do |t|
     t.string   "name"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20140703233731) do
 
   create_table "reviews", force: true do |t|
     t.string   "name"
-    t.string   "text"
+    t.text     "text",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end

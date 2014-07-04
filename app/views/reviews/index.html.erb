@@ -1,29 +1,27 @@
-<h1>Listing reviews</h1>
+<div class="main-item shadowed">
+  <h1>Customer Reviews</h1>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Text</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<% if @reviews.empty? %>
+<div class="main-item shadowed">
+  <p>There are currently no reviews posted. Check back later.</p>
+</div>
+<% end %>
 
-  <tbody>
-    <% @reviews.each do |review| %>
-      <tr>
-        <td><%= review.name %></td>
-        <td><%= review.text %></td>
-        <td><%= link_to 'Show', review %></td>
-        <td><%= link_to 'Edit', edit_review_path(review) %></td>
-        <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @reviews.each do |review| %>
+<div class="main-item shadowed">
+  <figure>
+    <figcaption>
+      <%= review.name %> says...
+    </figcaption>
 
-<br>
+    <blockquote>
+      <q><i><%= review.text %></i></q>
+    </blockquote>
 
-<%= link_to 'New Review', new_review_path %>
+  </figure>
+</div>
+<% end %>
+
+<!-- <br> -->
+<%# <%= link_to 'New Review', new_review_path %>

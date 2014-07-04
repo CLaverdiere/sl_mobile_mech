@@ -1,10 +1,11 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  layout 'static_page', except: [:show, :new, :edit, :create, :update, :destroy]
 
   # GET /reviews
   # GET /reviews.json
   def index
-    @reviews = Review.all
+    @reviews = Review.order("created_at DESC")
   end
 
   # GET /reviews/1
