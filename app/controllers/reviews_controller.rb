@@ -1,4 +1,7 @@
 class ReviewsController < ApplicationController
+  http_basic_authenticate_with name: ENV['username'], 
+                           password: ENV['password'], except: ["new", "create"]
+
   before_action :set_review, only: [:show, :edit, :update, :destroy]
   layout 'static_page', except: [:show, :new, :edit, :create, :update, :destroy]
 
@@ -29,8 +32,8 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       if @review.save
-        format.html { redirect_to @review, notice: 'Review was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @review }
+        format.html { redirect_to root_path, notice: 'Review was successfully created. Thanks for your feedback!' }
+        format.json { render action: 'show', status: :created, location: root_path }
       else
         format.html { render action: 'new' }
         format.json { render json: @review.errors, status: :unprocessable_entity }

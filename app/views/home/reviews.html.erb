@@ -19,11 +19,6 @@
       <q><i><%= review.text %></i></q>
     </blockquote>
 
-    <%= link_to "Edit #{review.name}'s Review", edit_review_path(review) %>
-    <br />
-    <%= link_to "Delete #{review.name}'s Review", review_path(review), 
-                 method: :delete, data: {confirm: "You sure you want to delete this?"} %>
-
   </figure>
 </div>
 <% end %>

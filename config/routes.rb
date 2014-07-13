@@ -8,6 +8,7 @@ SlMobileMech::Application.routes.draw do
   get "home/about"
   get "home/contact"
   get "home/index"
+  get "home/reviews"
   get "home/services"
 
   # Resources
