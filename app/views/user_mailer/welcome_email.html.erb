@@ -7,16 +7,10 @@
 </head>
 
 <body>
-  <h1>Hi <%= @appointment.name %> </h1>
+  <h2>Hi <%= @appointment.name %>! </h2>
   <p>Here's your current appointment info:</p>
 
-  <ul>
-    <li>Full Name: <%= @appointment.name  %></li>
-    <li>Email: <%= @appointment.email %></li>
-    <li>Time: <%= @appointment.time  %></li>
-    <li>Phone: <%= @appointment.phone  %></li>
-    <li>Reason: <%= @appointment.reason  %></li>
-  </ul>
+  <%= render 'admin/appointments/info', :a => @appointment %><br />
 
   <p>Please email me back if you need to change anything.</p>
   <p>Have a good day!</p>

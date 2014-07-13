@@ -1,7 +1,7 @@
 # TODO change to correct email
 
 class UserMailer < ActionMailer::Base
-  default from: "chris@cmlaverdiere.net"
+  default from: ENV['mail_email']
   # default from: "notifications@slmobilemechanic"
 
   def welcome_email(appointment)
