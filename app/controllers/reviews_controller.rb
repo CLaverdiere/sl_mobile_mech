@@ -32,6 +32,7 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       if @review.save
+        AdminMailer.review_notification_email(@review).deliver
         format.html { redirect_to root_path, notice: 'Review was successfully created. Thanks for your feedback!' }
         format.json { render action: 'show', status: :created, location: root_path }
       else
