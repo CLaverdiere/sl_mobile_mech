@@ -15,6 +15,7 @@ class AppointmentsController < ApplicationController
     respond_to do |format|
       if @appointment.save
         UserMailer.welcome_email(@appointment).deliver
+        AdminMailer.app_notification_email(@appointment).deliver
         flash[:notice] = "Appointment created!"
         format.html { redirect_to root_path, notice: 'Appointment successfully created. An email has been sent with confirmation info. Thanks!' }
         format.json { render action: 'confirm', status: :created, location: root_path}
