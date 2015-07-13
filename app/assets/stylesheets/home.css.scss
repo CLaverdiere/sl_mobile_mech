@@ -48,6 +48,9 @@ header{
 }
 
 footer{
+  a {
+    color: white;
+  }
   //background: $header_bg;
   background-image: $illusion_url;
   border-top: 3px solid $header_border;
