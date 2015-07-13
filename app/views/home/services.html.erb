@@ -2,135 +2,37 @@
 <%# <%  TODO Add Paypal Picures. %>
 
 <div class="main-item shadowed">
-  <h1>My Services</h1>
+  <h1>Services</h1>
 
-  <p>
-  I offer most any service you can think of from window regulators, to radio
-  installation, to transmissions and differentials.
-  </p>
+  <p>Below are some examples of common services I provide.</p>
 
-  <h2>Below are some examples of common services and labor prices.</h2>
-  <h3>The actual cost will vary depending on vehicle.</h3>
-  <table>
-    <tr>
-      <td>ABS/Air Bag Light </td> 
-      <td>$50 Diagnostic Fee/1 hour</td>
-    </tr>
-
-    <tr>
-      <td>Aftermarket Stereo/Speakers/Subwoofer/Amplifier/DVD Player Installation </td> 
-      <td>$60/hr</td>
-    </tr>  
-
-    <tr>
-      <td>Alternator </td> 
-      <td>$200</td>
-    </tr>
-
-    <tr>
-      <td>Ball Joint </td> 
-      <td>$120</td>
-    </tr> 
-
-    <tr>
-      <td>Battery </td> 
-      <td>$75</td>
-    </tr>
-
-    <tr>
-      <td>Brake Service </td>
-      <td>$225/axle (Includes New Ceramic Pads And Rotors)</td>
-    </tr> 
-
-    <tr>
-      <td>Check engine Light </td> 
-      <td>$50 Diagnostic Fee/1 hour</td>
-    </tr>
-
-    <tr>
-      <td>Control Arm </td> 
-      <td>$150</td>
-    </tr>
-
-    <tr>
-      <td>Flat Tire Patch </td> 
-      <td>$30</td>
-    </tr>
-
-    <tr>
-      <td>Fuel Pump </td>
-      <td>$250</td>
-    </tr>
-
-    <tr>
-      <td>Ignition lock cylinder </td>
-      <td>$150</td>
-    </tr>
-
-    <tr>
-      <td>Lock-out </td> 
-      <td>$60</td>
-    </tr>
-
-    <tr>
-      <td>No-Start </td>
-      <td>$50 Diagnostic Fee/1 Hour</td>
-    </tr>
-
-    <tr>
-      <td>Oil Change </td> 
-      <td>$40</td>
-    </tr>
-
-    <tr>
-      <td>Shocks </td> 
-      <td>$75/Side</td>
-    </tr>
-
-    <tr>
-      <td>Starter </td> 
-      <td>$200</td>
-    </tr>
-
-    <tr>
-      <td>Tie Rod </td>
-      <td>$80</td>
-    </tr> 
-
-    <tr>
-      <td>Timing Belt  </td>
-      <td>$300</td>
-    </tr>
-
-    <tr>
-      <td>Tune-up </td> 
-      <td>$100</td>
-    </tr>
-
-    <tr>
-      <td>Water Pump </td> 
-      <td>$200</td>
-    </tr>
-
-    <tr>
-      <td>Window Regulators </td>
-      <td>$100</td>
-    </tr>
-  </table>
+  <div class="images-inline">
+  <% @service_pics.each do |pic| %>
+    <figure class="images-inline">
+      <figcaption>
+        <center>
+          <b><%= File.basename(pic, ".png").gsub('_', ' ') %></b>
+        </center>
+      </figcaption>
+      <%= image_tag "parts/thumbnails/#{pic}" %>
+    </figure>
+  <% end %>
+  </div>
 </div>
 
 <div class="main-item shadowed">
   <h1>Getting a Quote</h1>
+
   <p>
   To get an exact quote, call (443-462-6178) or e-mail
-  slmobilemechanic@yahoo.com.  
+  slmobilemechanic@yahoo.com.
   </p>
-  
+
   <p>
   Have ready your vehicle's <b>year</b>, <b>make</b>, <b>model</b>, and
-  if possible the <b>VIN number</b>.  
+  if possible the <b>VIN number</b>.
   </p>
-  
+
   <p>
   Let me know what you need done, or if you need
   diagnostic work. I keep my phone on me and will receive your email instantly.
@@ -147,12 +49,12 @@
   <p>
   I will do most estimates absolutely free, provided it doesnt involve
   diagnostic.  If im just checking engine codes, most of the time there is no
-  charge. 
+  charge.
   </p>
 
   <p>
   I offer regular service and diagnostics, along with emergency service (Call me
-  before you call a tow truck). 
+  before you call a tow truck).
   </p>
 
   <p>
@@ -161,13 +63,6 @@
   prices for your bill, shop fees, etc.).  Of course this varies from job to job,
   and is not always what is in the book, it might be less or more depending on
   the complexity of a job.  I will give you a fair estimate based upon my
-  experience, and I stand behind my work. 
-  </p>
-
-  <p>
-  Diagnostic fee is $50 (unless multiple hours of diagnostic are required) (This
-  fee is rolled into the service fee if the service reccomended is done, Example:
-  If I find out you have a faulty oxygen sensor, You will only pay for the part
-  and the work, not the diagnostic fee).
+  experience, and I stand behind my work.
   </p>
 </div>

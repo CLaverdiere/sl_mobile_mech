@@ -7,7 +7,7 @@ group :production do
 end
 
 # Use sqlite3 as the database for Active Record
-group :development do 
+group :development do
   gem 'sqlite3'
 end
 
@@ -17,7 +17,7 @@ group :doc do
 end
 
 # Explicitly state Ruby version
-ruby '2.1.2'
+ruby '2.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -47,7 +47,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 
 # Storing credentials
 gem 'figaro'

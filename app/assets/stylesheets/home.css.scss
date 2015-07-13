@@ -34,7 +34,7 @@ header{
   li{
     display: inline;
     list-style: none;
-    padding-right: 20px; 
+    padding-right: 20px;
   }
 
   h1{
@@ -60,6 +60,10 @@ footer{
   padding: 50px;
   text-align: left;
   vertical-align: top;
+}
+
+.images-inline {
+  display: inline-block;
 }
 
 .main-item{

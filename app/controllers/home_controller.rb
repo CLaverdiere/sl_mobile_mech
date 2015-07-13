@@ -15,6 +15,9 @@ class HomeController < ApplicationController
   end
 
   def services
+    @service_pics = Dir.glob("app/assets/images/parts/thumbnails/*.png").map do |f|
+      File.basename f
+    end
   end
 
 end
